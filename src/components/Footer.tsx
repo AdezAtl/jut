@@ -12,10 +12,7 @@ export const Footer: React.FC = () => {
           {/* Logo & Socials column */}
           <div className="footer-brand-col">
             <a href="#" className="footer-logo">
-              <svg className="logo-svg" width="30" height="30" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="17" cy="17" r="14" stroke="#2F69FF" strokeWidth="4.5" strokeLinecap="round" strokeDasharray="60 30" />
-                <path d="M17 11V18C17 19.6569 15.6569 21 14 21C12.3431 21 11 19.6569 11 18" stroke="#2F69FF" strokeWidth="4.5" strokeLinecap="round" />
-              </svg>
+              <img src="/light_logo.PNG" className="logo-img" alt="jut logo" />
               <span className="logo-text">jut</span>
             </a>
             
