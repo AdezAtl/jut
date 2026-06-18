@@ -1,0 +1,116 @@
+.stats-section {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+
+@media (max-width: 992px) {
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* 2x2 Cards Grid */
+.stats-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+@media (max-width: 576px) {
+  .stats-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat-card {
+  background-color: var(--neutral-light);
+  border: 1px solid var(--neutral-border);
+  padding: 40px 32px;
+  border-radius: 16px;
+  transition: var(--transition-smooth);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: #cbd5e1;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--neutral-dark);
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: var(--neutral-gray);
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Highlighted Stat Card Style (Nigeria/Niger specific style) */
+.stat-card.highlighted {
+  background: linear-gradient(135deg, var(--primary-light) 0%, #e0e7ff 100%);
+  border-color: rgba(47, 105, 255, 0.2);
+}
+
+.stat-card.highlighted:hover {
+  box-shadow: 0 10px 25px rgba(47, 105, 255, 0.1);
+  border-color: rgba(47, 105, 255, 0.3);
+}
+
+.stat-card.highlighted .stat-number {
+  color: var(--primary);
+}
+
+.stat-card.highlighted .stat-label {
+  color: var(--primary-hover);
+}
+
+/* Right Side Commitments Panel */
+.stats-info-side {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: 2px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.info-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--neutral-dark);
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.info-text {
+  font-size: 1.1rem;
+  color: var(--neutral-gray);
+  line-height: 1.75;
+}
+
+@media (max-width: 768px) {
+  .info-title {
+    font-size: 2.25rem;
+  }
+}

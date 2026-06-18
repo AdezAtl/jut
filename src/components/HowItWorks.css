@@ -1,0 +1,128 @@
+.how-it-works-section {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+.how-it-works-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.2fr;
+  gap: 80px;
+  align-items: flex-start;
+}
+
+@media (max-width: 992px) {
+  .how-it-works-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+}
+
+/* Left Side Styling */
+.how-left-side {
+  position: sticky;
+  top: 120px;
+}
+
+@media (max-width: 992px) {
+  .how-left-side {
+    position: static;
+  }
+}
+
+.how-main-title {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--neutral-dark);
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.how-main-text {
+  font-size: 1.1rem;
+  color: var(--neutral-gray);
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+.how-dots-indicator {
+  display: flex;
+  gap: 8px;
+}
+
+.how-dots-indicator .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--neutral-border);
+  transition: var(--transition-smooth);
+  cursor: pointer;
+}
+
+.how-dots-indicator .dot.active {
+  background-color: var(--primary);
+  transform: scale(1.2);
+}
+
+/* Right Side Steps List */
+.how-right-side {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.step-item {
+  display: flex;
+  gap: 24px;
+  padding: 20px;
+  border-radius: 16px;
+  background-color: #ffffff;
+  border: 1px solid transparent;
+  transition: var(--transition-smooth);
+}
+
+.step-item:hover {
+  background-color: var(--neutral-light);
+  border-color: var(--neutral-border);
+  transform: translateX(4px);
+}
+
+.step-icon-container {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background-color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 10px rgba(47, 105, 255, 0.2);
+  transition: var(--transition-smooth);
+}
+
+.step-item:hover .step-icon-container {
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 6px 15px rgba(47, 105, 255, 0.3);
+}
+
+.step-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.step-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--neutral-dark);
+}
+
+.step-desc {
+  font-size: 0.95rem;
+  color: var(--neutral-gray);
+  line-height: 1.5;
+}
+
+.step-desc-title {
+  color: var(--neutral-dark);
+  font-weight: 600;
+}
