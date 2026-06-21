@@ -1,14 +1,30 @@
-import React from 'react';
-import './SkillsSection.css';
+import React from "react";
+import "./SkillsSection.css";
 
 const row1Skills = [
-  'Plumber', 'Electrician', 'Carpenter', 'Painter', 'Interior Designer', 
-  'Roofer', 'Mason', 'Welder', 'Gardener', 'AC Technician'
+  "Plumber",
+  "Electrician",
+  "Carpenter",
+  "Painter",
+  "Interior Designer",
+  "Roofer",
+  "Mason",
+  "Welder",
+  "Gardener",
+  "AC Technician",
 ];
 
 const row2Skills = [
-  'House Cleaner', 'Auto Mechanic', 'Tailor', 'Hairdresser', 'Makeup Artist', 
-  'Caterer', 'Photographer', 'Graphic Designer', 'Web Developer', 'App Developer'
+  "House Cleaner",
+  "Auto Mechanic",
+  "Tailor",
+  "Hairdresser",
+  "Makeup Artist",
+  "Caterer",
+  "Photographer",
+  "Graphic Designer",
+  "Web Developer",
+  "App Developer",
 ];
 
 export const SkillsSection: React.FC = () => {
@@ -19,8 +35,8 @@ export const SkillsSection: React.FC = () => {
   return (
     <section className="skills-section" id="for-client">
       <div className="container skills-container">
-        <h2 className="skills-title">One platform. Every skill you need.</h2>
-        
+        <h3 className="skills-title">One platform. Every skill you need.</h3>
+
         <div className="skills-scroller-container">
           {/* Row 1: Scroll Left */}
           <div className="skills-row">

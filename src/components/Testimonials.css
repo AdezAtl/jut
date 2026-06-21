@@ -1,6 +1,6 @@
 .testimonials-section {
   padding: 100px 0;
-  background-color: #ffffff;
+  background-color: var(--bg-color);
   overflow: hidden;
 }
 
@@ -12,7 +12,7 @@
 }
 
 .testimonials-title {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: 800;
   color: var(--neutral-dark);
   letter-spacing: -1px;
@@ -37,13 +37,13 @@
 }
 
 .btn-prev {
-  background-color: #f1f5f9;
+  background-color: var(--neutral-light);
   color: var(--neutral-dark);
   border: 1px solid var(--neutral-border);
 }
 
 .btn-prev:hover {
-  background-color: #e2e8f0;
+  background-color: var(--neutral-border);
   transform: translateX(-2px);
 }
 
@@ -62,7 +62,7 @@
 /* Testimonials cards track */
 .testimonials-track {
   display: flex;
-  gap: 24px;
+  gap: 32px;
   margin-bottom: 40px;
   transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -77,13 +77,13 @@
   flex: 1;
   background-color: var(--neutral-light);
   border: 1px solid var(--neutral-border);
-  padding: 40px 32px;
+  padding: 48px 40px;
   border-radius: 20px;
   transition: var(--transition-smooth);
   display: flex;
   flex-direction: column;
   gap: 24px;
-  min-height: 250px;
+  min-height: 280px;
 }
 
 .testimonial-card:hover {
@@ -99,13 +99,13 @@
 }
 
 .user-avatar {
-  width: 56px;
-  height: 56px;
+  width: 64px;
+  height: 64px;
   border-radius: 50%;
   overflow: hidden;
-  border: 2px solid #ffffff;
+  border: 2px solid var(--card-bg);
   box-shadow: var(--shadow-sm);
-  background-color: #ffffff;
+  background-color: var(--card-bg);
 }
 
 .user-avatar img {
@@ -121,19 +121,19 @@
 }
 
 .user-name {
-  font-size: 1.15rem;
+  font-size: 1.3rem;
   font-weight: 700;
   color: var(--neutral-dark);
 }
 
 .user-role {
-  font-size: 0.85rem;
+  font-size: 0.95rem;
   font-weight: 600;
   color: var(--neutral-gray);
 }
 
 .user-comment {
-  font-size: 1rem;
+  font-size: 1.1rem;
   line-height: 1.6;
   color: var(--neutral-gray);
   font-style: italic;

@@ -1,8 +1,8 @@
-import React from 'react';
-import './Hero.css';
-import plumberImg from '../assets/artisan_plumber.png';
-import designerImg from '../assets/artisan_designer.png';
-import electricianImg from '../assets/artisan_electrician.png';
+import React from "react";
+import "./Hero.css";
+import plumberImg from "../assets/artisan_plumber.png";
+import designerImg from "../assets/artisan_designer.png";
+import electricianImg from "../assets/artisan_electrician.png";
 
 interface FloatingBubbleProps {
   avatar: string;
@@ -11,7 +11,12 @@ interface FloatingBubbleProps {
   className: string;
 }
 
-const FloatingBubble: React.FC<FloatingBubbleProps> = ({ avatar, role, text, className }) => {
+const FloatingBubble: React.FC<FloatingBubbleProps> = ({
+  avatar,
+  role,
+  text,
+  className,
+}) => {
   return (
     <div className={`floating-node ${className}`}>
       <div className="node-connector"></div>
@@ -30,19 +35,34 @@ export const Hero: React.FC = () => {
     <section className="hero-section">
       <div className="grid-bg">
         {/* Accent grid blocks highlighting parts of the grid */}
-        <div className="grid-bg-accent" style={{ top: '20%', left: '15%' }}></div>
-        <div className="grid-bg-accent" style={{ top: '65%', right: '10%' }}></div>
-        <div className="grid-bg-accent" style={{ bottom: '15%', left: '40%' }}></div>
+        <div
+          className="grid-bg-accent"
+          style={{ top: "15%", left: "15%" }}
+        ></div>
+        <div
+          className="grid-bg-accent"
+          style={{ top: "65%", right: "10%" }}
+        ></div>
+        <div
+          className="grid-bg-accent"
+          style={{ bottom: "15%", left: "40%" }}
+        ></div>
+        <div
+          className="grid-bg-accent"
+          style={{ top: "30%", right: "30%" }}
+        ></div>
       </div>
 
       <div className="container hero-container">
         <div className="hero-content">
-          <h1 className="hero-title">
-            Hire Skilled Professionals.<br />
+          <p className="hero-title">
+            Hire Skilled Professionals.
+            <br />
             Right When You Need It.
-          </h1>
+          </p>
           <p className="hero-subtitle">
-            From trusted artisans to top digital talent — hire verified freelancers for any job, anytime.
+            From trusted artisans to top digital talent — hire verified
+            freelancers for any job, anytime.
           </p>
           <a href="#download" className="btn btn-primary btn-hero-cta">
             Download App
@@ -51,35 +71,35 @@ export const Hero: React.FC = () => {
 
         {/* Floating artisan layout */}
         <div className="floating-layout-container">
-          <FloatingBubble 
-            avatar={plumberImg} 
-            role="Plumber" 
-            text="I need a Plumber" 
-            className="node-1 animate-float" 
+          <FloatingBubble
+            avatar={plumberImg}
+            role="Plumber"
+            text="I need a Plumber"
+            className="node-1 animate-float"
           />
-          <FloatingBubble 
-            avatar={designerImg} 
-            role="Interior Designer" 
-            text="I need a Designer" 
-            className="node-2 animate-float-delayed" 
+          <FloatingBubble
+            avatar={designerImg}
+            role="Interior Designer"
+            text="I need a Designer"
+            className="node-2 animate-float-delayed"
           />
-          <FloatingBubble 
-            avatar={electricianImg} 
-            role="Electrician" 
-            text="I need an Electrician" 
-            className="node-3 animate-float" 
+          <FloatingBubble
+            avatar={electricianImg}
+            role="Electrician"
+            text="I need an Electrician"
+            className="node-3 animate-float"
           />
-          <FloatingBubble 
+          <FloatingBubble
             avatar={plumberImg} /* reused for visual balance */
-            role="Carpenter" 
-            text="I need a Carpenter" 
-            className="node-4 animate-float-delayed" 
+            role="Carpenter"
+            text="I need a Carpenter"
+            className="node-4 animate-float-delayed"
           />
-          <FloatingBubble 
-            avatar={designerImg} 
-            role="Painter" 
-            text="I need a Painter" 
-            className="node-5 animate-float" 
+          <FloatingBubble
+            avatar={designerImg}
+            role="Painter"
+            text="I need a Painter"
+            className="node-5 animate-float"
           />
         </div>
       </div>

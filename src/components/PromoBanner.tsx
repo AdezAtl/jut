@@ -1,26 +1,37 @@
-import React from 'react';
-import './PromoBanner.css';
+import React from "react";
+import "./PromoBanner.css";
 
-export const PromoBanner: React.FC = () => {
+interface PromoBannerProps {
+  theme: "light" | "dark";
+}
+
+export const PromoBanner: React.FC<PromoBannerProps> = ({ theme }) => {
+  const isDark = theme === "dark";
+
   return (
     <section className="promo-section">
-      <div className="container">
-        <div className="promo-card">
-          {/* Overlay elements representing the geometric circle patterns from the design */}
-          <div className="promo-circle-overlay circle-1"></div>
-          <div className="promo-circle-overlay circle-2"></div>
-          <div className="promo-circle-overlay circle-3"></div>
-
-          <div className="promo-content">
-            <h2 className="promo-title">Elevate Your Brand Today!</h2>
-            <div className="promo-info">
-              <p className="promo-text">
-                Join thousands of clients and professionals already using the platform to connect, work smarter, and get things done faster.
-              </p>
-              <a href="#download" className="btn btn-white btn-promo-cta">
-                Download App
-              </a>
-            </div>
+      <div className="promo-container">
+        <div
+          className={`cta-banner ${isDark ? "banner-dark" : "banner-light"}`}
+        >
+          <div className="cta-left">
+            <h2 className="cta-headline">
+              Elevate Your
+              <br />
+              Brand Today!
+            </h2>
+          </div>
+          <div className="cta-right">
+            <p className="cta-body">
+              Join thousands of clients and professionals already using the
+              platform to connect, work smarter, and get things done faster.
+            </p>
+            <a
+              href="#download"
+              className={`cta-btn ${isDark ? "btn-dark" : "btn-light"}`}
+            >
+              Download App
+            </a>
           </div>
         </div>
       </div>

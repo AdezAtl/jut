@@ -1,8 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
-import './Navbar.css';
+import React, { useState, useEffect } from "react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import "./Navbar.css";
 
-export const Navbar: React.FC = () => {
+interface NavbarProps {
+  theme: "light" | "dark";
+  toggleTheme: () => void;
+}
+
+export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -14,42 +19,103 @@ export const Navbar: React.FC = () => {
         setScrolled(false);
       }
     };
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <header className={`navbar-header ${scrolled ? 'scrolled' : ''}`}>
+    <header className={`navbar-header ${scrolled ? "scrolled" : ""}`}>
       <div className="container navbar-container">
         <a href="#" className="navbar-logo">
-          <img src="/light_logo.PNG" className="logo-img" alt="jut logo" />
+          <img src={theme === "dark" ? "/dark_logo.PNG" : "/light_logo.PNG"} className="logo-img" alt="jut logo" />
           <span className="logo-text">jut</span>
         </a>
 
         {/* Desktop Navigation */}
         <nav className="desktop-nav">
-          <a href="#how-it-works" className="nav-link">How it works</a>
-          <a href="#for-client" className="nav-link">For client</a>
-          <a href="#for-professional" className="nav-link">For Professional</a>
-          <a href="#about-us" className="nav-link">About Us</a>
+          <a href="#how-it-works" className="nav-link">
+            How it works
+          </a>
+          <a href="#for-client" className="nav-link">
+            For client
+          </a>
+          <a href="#for-professional" className="nav-link">
+            For Professional
+          </a>
+          <a href="#about-us" className="nav-link">
+            About Us
+          </a>
         </nav>
 
         <div className="navbar-actions">
-          <a href="#book" className="btn btn-primary btn-book">Book a service</a>
-          <button className="mobile-toggle-btn" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle navigation">
+          <button onClick={toggleTheme} className="theme-toggle-btn" aria-label="Toggle theme">
+            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+          
+          <a href="#book" className="btn btn-primary btn-book">
+            Download App
+          </a>
+          <button
+            className="mobile-toggle-btn"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle navigation"
+          >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
       </div>
 
       {/* Mobile Sidebar */}
-      <div className={`mobile-sidebar ${isOpen ? 'active' : ''}`}>
+      <div className={`mobile-sidebar ${isOpen ? "active" : ""}`}>
         <nav className="mobile-nav">
-          <a href="#how-it-works" className="mobile-nav-link" onClick={() => setIsOpen(false)}>How it works</a>
-          <a href="#for-client" className="mobile-nav-link" onClick={() => setIsOpen(false)}>For client</a>
-          <a href="#for-professional" className="mobile-nav-link" onClick={() => setIsOpen(false)}>For Professional</a>
-          <a href="#about-us" className="mobile-nav-link" onClick={() => setIsOpen(false)}>About Us</a>
-          <a href="#book" className="btn btn-primary mobile-book-btn" onClick={() => setIsOpen(false)}>Book a service</a>
+          <a
+            href="#how-it-works"
+            className="mobile-nav-link"
+            onClick={() => setIsOpen(false)}
+          >
+            How it works
+          </a>
+          <a
+            href="#for-client"
+            className="mobile-nav-link"
+            onClick={() => setIsOpen(false)}
+          >
+            For client
+          </a>
+          <a
+            href="#for-professional"
+            className="mobile-nav-link"
+            onClick={() => setIsOpen(false)}
+          >
+            For Professional
+          </a>
+          <a
+            href="#about-us"
+            className="mobile-nav-link"
+            onClick={() => setIsOpen(false)}
+          >
+            About Us
+          </a>
+          
+          <a
+            href="#book"
+            className="btn btn-primary mobile-book-btn"
+            onClick={() => setIsOpen(false)}
+          >
+            Book a service
+          </a>
+
+          <button
+            onClick={() => {
+              toggleTheme();
+              setIsOpen(false);
+            }}
+            className="theme-toggle-btn mobile-theme-btn"
+            aria-label="Toggle theme"
+          >
+            {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
+            <span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
+          </button>
         </nav>
       </div>
     </header>
