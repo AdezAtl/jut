@@ -84,8 +84,7 @@
 }
 
 .floating-node:hover {
-  transform: scale(1.05) !important;
-  z-index: 50;
+  transform: translateY(-2px);
 }
 
 .avatar-circle {

@@ -1,6 +1,6 @@
 .skills-section {
   padding: 80px 0;
-  background-color: var(--bg-color);
+  background-color: var(--primary-light);
   overflow: hidden;
   position: relative;
 }
@@ -22,7 +22,7 @@
 
 .skills-scroller-container {
   position: relative;
-  width: 70vw;
+  width: 100vw;
   left: 0;
   right: 0;
   margin-left: 0;
@@ -33,7 +33,7 @@
   overflow: hidden;
 }
 
-/* Fading edge gradients for premium layout */
+/* Fading edge gradients for premium layout 
 .skills-scroller-container::before,
 .skills-scroller-container::after {
   content: "";
@@ -53,12 +53,15 @@
 .skills-scroller-container::after {
   right: 0;
   background: linear-gradient(to left, var(--bg-color), transparent);
-}
+} */
 
 .skills-row {
   display: flex;
   width: 100%;
   overflow: hidden;
+  height: 40px;
+  padding-bottom: 5px;
+  padding-top: 5px;
 }
 
 .skill-badge {
@@ -86,5 +89,5 @@
 }
 
 .mt-4 {
-  margin-top: 16px;
+  margin-top: 15px;
 }

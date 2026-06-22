@@ -26,7 +26,7 @@
 }
 
 :root[data-theme="dark"] {
-  --bg-color: #030712;
+  --bg-color: #0f172a;
   --primary: #2f69ff;
   --primary-hover: #1d52df;
   --primary-light: rgba(47, 105, 255, 0.15);
