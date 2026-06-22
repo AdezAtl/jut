@@ -1,6 +1,23 @@
 import React from "react";
-import { Facebook, Twitter, Instagram } from "lucide-react";
+import { Facebook, Instagram } from "lucide-react";
 import "./Footer.css";
+
+const TiktokIcon: React.FC<{ size?: number }> = ({ size = 18 }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={size}
+    height={size}
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth={2}
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className="lucide lucide-tiktok"
+  >
+    <path d="M9 12a4 4 0 1 0 4 4v-12a5 5 0 0 0 5 5" />
+  </svg>
+);
 
 interface FooterProps {
   theme: "light" | "dark";
@@ -25,7 +42,7 @@ export const Footer: React.FC<FooterProps> = ({ theme }) => {
 
             <div className="social-links">
               <a
-                href="https://facebook.com"
+                href="https://www.facebook.com/share/1Cv49djG3V/?mibextid=wwXIfr"
                 className="social-icon"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -34,16 +51,16 @@ export const Footer: React.FC<FooterProps> = ({ theme }) => {
                 <Facebook size={18} />
               </a>
               <a
-                href="https://twitter.com"
+                href="https://www.tiktok.com/@aoniltd?_r=1&_t=ZS-97OYQ3OfDAT"
                 className="social-icon"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="Twitter"
+                aria-label="TikTok"
               >
-                <Twitter size={18} />
+                <TiktokIcon size={18} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/aoniltd?igsh=aWplMmV0M3F1djN2&utm_source=qr"
                 className="social-icon"
                 target="_blank"
                 rel="noopener noreferrer"

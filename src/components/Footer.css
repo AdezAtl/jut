@@ -47,27 +47,28 @@
 .social-links {
   display: flex;
   justify-content: space-between;
-  width: 200px;
+  width: 170px;
+  margin-left: 10px;
 }
 
 .social-icon {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  background-color: var(--card-bg);
+  background-color: var(--primary);
   border: 1px solid var(--neutral-border);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: var(--neutral-gray);
+  color: #ffffff;
   transition: var(--transition-smooth);
   box-shadow: var(--shadow-sm);
   text-decoration: none;
 }
 
 .social-icon:hover {
-  background-color: var(--primary);
-  color: #ffffff;
+  background-color: #ffffff;
+  color: var(--primary);
   border-color: var(--primary);
   transform: translateY(-3px);
   box-shadow: 0 4px 10px rgba(47, 105, 255, 0.2);
