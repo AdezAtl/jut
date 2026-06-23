@@ -6,6 +6,14 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
+  background-image: url("/hero-bg-light.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+[data-theme="dark"] .hero-section {
+  background-image: url("/hero-bg-dark.png");
 }
 
 .hero-container {
@@ -80,11 +88,16 @@
   display: flex;
   align-items: center;
   gap: 12px;
-  transition: transform 0.3s ease;
+  transform: translateY(0) rotate(var(--rotation, 0deg));
+  transition: var(--transition-smooth);
 }
 
 .floating-node:hover {
-  transform: translateY(-2px);
+  transform: translateY(-2px) rotate(var(--rotation, 0deg));
+}
+
+.floating-node:hover .speech-bubble {
+  box-shadow: 0 6px 20px rgba(47, 105, 255, 0.4);
 }
 
 .avatar-circle {
@@ -109,10 +122,9 @@
   border: 1px solid var(--neutral-border);
   border-radius: 30px;
   padding: 10px 22px;
-  box-shadow:
-    0 4px 12px rgba(47, 105, 255, 0.04),
-    0 2px 4px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 14px rgba(47, 105, 255, 0.15);
   white-space: nowrap;
+  transition: var(--transition-smooth);
 }
 
 [data-theme="dark"] .speech-bubble {
@@ -120,9 +132,7 @@
   border: 1px solid var(--neutral-border);
   border-radius: 30px;
   padding: 10px 22px;
-  box-shadow:
-    0 4px 12px rgba(47, 105, 255, 0.04),
-    0 2px 4px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 4px 14px rgba(47, 105, 255, 0.3);
   white-space: nowrap;
 }
 
@@ -150,32 +160,32 @@
 .node-1 {
   left: 2%;
   top: 40%;
-  transform: rotate(7deg);
+  --rotation: 7deg;
 }
 
 .node-2 {
   left: 22%;
   top: 10%;
-  transform: rotate(-7deg);
+  --rotation: -7deg;
 }
 
 .node-3 {
   left: 42%;
   top: 80%;
-  transform: rotate(7deg);
+  --rotation: 7deg;
 }
 
 /* Right side nodes */
 .node-4 {
   right: 28%;
   top: 15%;
-  transform: rotate(-7deg);
+  --rotation: -7deg;
 }
 
 .node-5 {
   right: 3%;
   top: 65%;
-  transform: rotate(7deg);
+  --rotation: 7deg;
 }
 
 /* Responsive spatial layout */
@@ -183,26 +193,21 @@
   .node-1 {
     left: 5%;
     top: 5%;
-    transform: rotate(7deg);
   }
   .node-2 {
     left: 65%;
     top: 15%;
-    transform: rotate(-7deg);
   }
   .node-3 {
     left: 35%;
     top: 34%;
-    transform: rotate(7deg);
   }
   .node-4 {
     right: 55%;
     top: 65%;
-    transform: rotate(-7deg);
   }
   .node-5 {
     right: 2%;
     top: 80%;
-    transform: rotate(7deg);
   }
 }

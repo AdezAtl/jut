@@ -52,13 +52,29 @@
 
 /* ─── LIGHT VARIANT ──────────────────────────────────────── */
 .banner-light {
-  background: linear-gradient(135deg, #3862ff 0%, #1d4ed8 100%);
+  background-image: url("/promo-section-light.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner-light::before,
+.banner-light::after {
+  display: none;
 }
 
 /* ─── DARK VARIANT ───────────────────────────────────────── */
 .banner-dark {
-  background: linear-gradient(135deg, #001b5c 0%, #001037 100%);
+  background-image: url("/promo-section-dark.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px solid rgba(47, 105, 255, 0.4);
+}
+
+.banner-dark::before,
+.banner-dark::after {
+  display: none;
 }
 
 /* ─── CONTENT ────────────────────────────────────────────── */

@@ -27,7 +27,11 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
     <header className={`navbar-header ${scrolled ? "scrolled" : ""}`}>
       <div className="container navbar-container">
         <a href="#" className="navbar-logo">
-          <img src={theme === "dark" ? "/dark_logo.PNG" : "/light_logo.PNG"} className="logo-img" alt="jut logo" />
+          <img
+            src={theme === "dark" ? "/dark_logo.PNG" : "/light_logo.PNG"}
+            className="logo-img"
+            alt="jut logo"
+          />
           <span className="logo-text">jut</span>
         </a>
 
@@ -48,10 +52,14 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
         </nav>
 
         <div className="navbar-actions">
-          <button onClick={toggleTheme} className="theme-toggle-btn" aria-label="Toggle theme">
+          <button
+            onClick={toggleTheme}
+            className="theme-toggle-btn"
+            aria-label="Toggle theme"
+          >
             {theme === "dark" ? <Sun size={20} /> : <Moon size={20} />}
           </button>
-          
+
           <a href="#book" className="btn btn-primary btn-book">
             Download App
           </a>
@@ -96,7 +104,7 @@ export const Navbar: React.FC<NavbarProps> = ({ theme, toggleTheme }) => {
           >
             About Us
           </a>
-          
+
           <a
             href="#book"
             className="btn btn-primary mobile-book-btn"

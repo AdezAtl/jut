@@ -33,26 +33,6 @@ const FloatingBubble: React.FC<FloatingBubbleProps> = ({
 export const Hero: React.FC = () => {
   return (
     <section className="hero-section">
-      <div className="grid-bg">
-        {/* Accent grid blocks highlighting parts of the grid */}
-        <div
-          className="grid-bg-accent"
-          style={{ top: "15%", left: "15%" }}
-        ></div>
-        <div
-          className="grid-bg-accent"
-          style={{ top: "65%", right: "10%" }}
-        ></div>
-        <div
-          className="grid-bg-accent"
-          style={{ bottom: "15%", left: "40%" }}
-        ></div>
-        <div
-          className="grid-bg-accent"
-          style={{ top: "30%", right: "30%" }}
-        ></div>
-      </div>
-
       <div className="container hero-container">
         <div className="hero-content">
           <p className="hero-title">
@@ -75,31 +55,31 @@ export const Hero: React.FC = () => {
             avatar={plumberImg}
             role="Plumber"
             text="I need a Plumber"
-            className="node-1 animate-float"
+            className="node-1"
           />
           <FloatingBubble
             avatar={designerImg}
             role="Interior Designer"
             text="I need a Designer"
-            className="node-2 animate-float-delayed"
+            className="node-2"
           />
           <FloatingBubble
             avatar={electricianImg}
             role="Electrician"
             text="I need an Electrician"
-            className="node-3 animate-float"
+            className="node-3"
           />
           <FloatingBubble
             avatar={plumberImg} /* reused for visual balance */
             role="Carpenter"
             text="I need a Carpenter"
-            className="node-4 animate-float-delayed"
+            className="node-4"
           />
           <FloatingBubble
             avatar={designerImg}
             role="Painter"
             text="I need a Painter"
-            className="node-5 animate-float"
+            className="node-5"
           />
         </div>
       </div>
