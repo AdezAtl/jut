@@ -33,7 +33,9 @@ export const Footer: React.FC<FooterProps> = ({ theme }) => {
           <div className="footer-brand-col">
             <a href="#" className="footer-logo">
               <img
-                src={theme === "dark" ? "/dark_logo.PNG" : "/light_logo.PNG"}
+                src={
+                  theme === "dark" ? "/dark_logo.PNG" : "/blue_logo-no-bg.png"
+                }
                 className="logo-img"
                 alt="jut logo"
               />
